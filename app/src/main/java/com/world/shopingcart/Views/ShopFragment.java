@@ -9,9 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.world.shopingcart.R;
+import com.world.shopingcart.databinding.FragmentShopBinding;
 
 
 public class ShopFragment extends Fragment {
+
+    FragmentShopBinding fragmentShopBinding;
 
 
 
@@ -25,6 +28,7 @@ public class ShopFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop, container, false);
+        fragmentShopBinding=FragmentShopBinding.inflate(inflater,container,false);
+        return fragmentShopBinding.getRoot();
     }
 }
